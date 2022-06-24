@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+
+import {useEffect, useState} from 'react'
+
+import CoinList from './components/CoinList/CoinList'
+import PageBtn from './components/PageBtn/PageBtn'
+import useFetch from './hooks/useFetch'
 
 function App() {
+  const [coins, setCoins] = useState([]);
+  const [search, setSearch] = useState('');
+  const [page, setPage] = useState(1);
+  const {loading,data} = useFetch(page)
+  useEffect(() => {
+  setCoins(data)
+  },[data]);
+  const handleSearch = (e) => {
+    setSearch(e.target.value)
+  }
+  const filteredCoins = coins.filter(coin => {
+    return coin.name.toLowerCase().includes(search.toLowerCase())
+  })  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="coin-app">
+      <div className="coin-search">
+        <h1 className="coin-text">Crypto Currency</h1>
+        <h2>Page : {loading?'loading...':page}</h2>
+        <form onSubmit={(e)=> e.preventDefault()}>
+
+          <PageBtn id={'prev'} setPage={setPage} currentPage={page} pageChange={-1}/>
+          <input type="text" onChange={handleSearch} className="coin-input" placeholder='Search' value={search}/>
+
+          <PageBtn id={'next'} setPage={setPage} currentPage={page} pageChange={1}/>
+
+        </form>
+      </div>
+      <CoinList coins={filteredCoins}/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

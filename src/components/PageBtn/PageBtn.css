@@ -1,0 +1,32 @@
+.btn {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border: none; }
+
+.next {
+  background-image: -webkit-gradient(linear, left top, right top, from(#231b96), to(#22c1c3));
+  background-image: linear-gradient(90deg, #231b96 0%, #22c1c3 100%);
+  -webkit-clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+  clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%); }
+
+.back {
+  background-image: -webkit-gradient(linear, right top, left top, from(#231b96), to(#22c1c3));
+  background-image: linear-gradient(-90deg, #231b96 0%, #22c1c3 100%);
+  -webkit-clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+  clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%); }
+
+.btn[disabled], .btn[disabled]:hover {
+  cursor: default;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(35, 27, 150, 0.1)), to(rgba(34, 193, 195, 0.1)));
+  background-image: linear-gradient(90deg, rgba(35, 27, 150, 0.1) 0%, rgba(34, 193, 195, 0.1) 100%); }
+
+.next:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(#463faa), to(#82cacb));
+  background-image: linear-gradient(90deg, #463faa 0%, #82cacb 100%); }
+
+.back:hover {
+  background-image: -webkit-gradient(linear, right top, left top, from(#463faa), to(#82cacb));
+  background-image: linear-gradient(-90deg, #463faa 0%, #82cacb 100%); }
+
+/*# sourceMappingURL=PageBtn.css.map */

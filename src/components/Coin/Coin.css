@@ -1,0 +1,13 @@
+.coin-container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+.coin-container .coin-row { color: white; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: nowrap; flex-wrap: nowrap; justify-items: flex-start; -webkit-box-align: center; -ms-flex-align: center; align-items: center; min-height: 20vh; border-bottom: 1px dashed #d7d7d7; width: 90vw; }
+.coin-container .coin-row .coin { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding-right: 20px; min-width: 300px; }
+.coin-container .coin-row .coin img { height: 30px; width: 30px; margin-right: 10px; }
+.coin-container .coin-row .coin h1 { font-size: 30px; letter-spacing: 1px; width: 150px; font-weight: 500; }
+.coin-container .coin-row .coin .coin-symbol { text-transform: uppercase; }
+.coin-container .coin-row .coin-data { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; text-align: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; width: 100%; }
+.coin-container .coin-row .coin-data .coin-price { width: 100px; -ms-flex-negative: 2; flex-shrink: 2; }
+.coin-container .coin-row .coin-data .coin-volume { width: 150px; -ms-flex-negative: 1; flex-shrink: 1; margin-left: 20px; margin-right: 20px; }
+.coin-container .coin-row .coin-data .coin-marketcap { width: 200px; -ms-flex-negative: 2; flex-shrink: 2; text-align: center; margin-left: 20px; margin-right: 20px; }
+.coin-container .coin-row .coin-data .coin-percent { -ms-flex-negative: 0; flex-shrink: 0; margin-left: 20px; margin-right: 20px; }
+.coin-container .coin-row .coin-data .coin-percent.red { color: #f00606; }
+.coin-container .coin-row .coin-data .coin-percent.green { color: #11d811; }
