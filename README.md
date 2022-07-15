@@ -1,2 +1,2 @@
 # Crypto Currency Project
-## preview =>  https://react-crypto-currency-sajjad-kazemi.netlify.app/
+## preview =>  [Crypto Currency with React](https://sajjad-kazemi.github.io/cryptoCurrencyProject/)
